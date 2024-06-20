@@ -1,6 +1,9 @@
 import { useState } from "react"
 import words from './wordList.json'
 import './App.css';
+import HangmanDrawing from "./Components/HangmanDrawing";
+import HangmanWord from "./Components/HangmanWord";
+import Keyboard from "./Components/Keyboard";
 
 function App() {
 
@@ -26,9 +29,14 @@ function App() {
         {wordToGuess}
       </h1>
       <div>
-        <HangmanDrawing/>
+        <div>
+          <HangmanDrawing/>
+        </div>
         <HangmanWord/>
-        <Keyboard/>
+        <div style={{height:"20px"}}></div>
+        <div style={{alignSelf: "stretch"}}>
+          <Keyboard/>
+        </div>
       </div>
     </div> 
   )
